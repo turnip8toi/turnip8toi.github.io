@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="诺手出装指南 - 提供最新、最全的诺克萨斯之手德莱厄斯出装推荐、符文搭配、连招技巧及对线思路，助你上分。">
+    <meta name="keywords" content="诺手出装,德莱厄斯出装,英雄联盟出装,上单攻略">
+    <title>诺手出装-英雄联盟德莱厄斯上分攻略与符文推荐</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #c89b3c; /* Gold */
+            --secondary-color: #1a1a1a;
+            --accent-red: #d32f2f;
+            --bg-dark: #121212;
+            --bg-card: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c1e0e 0%, #121212 100%);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .nav-container nav {
+                display: none; /* Simplified for mobile */
+            }
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 12px;
+        }
+
+        .section-header h2 {
+            font-size: 1.5rem;
+            color: var(--text-main);
+        }
+
+        /* Build Card Styles */
+        .build-card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-bottom: 24px;
+            border: 1px solid #333;
+        }
+
+        .build-header {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .build-header h3 {
+            font-size: 1.25rem;
+        }
+
+        .tag {
+            background-color: var(--primary-color);
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .build-items {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 16px;
+            text-align: center;
+        }
+
+        .item-slot {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .item-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #333;
+            border-radius: 50%;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        
+        .item-slot:nth-child(1) .item-icon { background-color: #535353; }
+        .item-slot:nth-child(2) .item-icon { background-color: #4d4d4d; }
+        .item-slot:nth-child(3) .item-icon { background-color: #555555; }
+        .item-slot:nth-child(4) .item-icon { background-color: #5f5f5f; }
+        .item-slot:nth-child(5) .item-icon { background-color: #6b6b6b; }
+
+        .item-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .item-type {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+
+        /* Runes Section */
+        .runes-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .rune-card {
+            background-color: var(--bg-card);
+            padding: 16px;
+            border-radius: var(--border-radius);
+            border: 1px solid #333;
+        }
+
+        .rune-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .rune-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Strategy List */
+        .strategy-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .strategy-item {
+            background-color: var(--bg-card);
+            padding: 16px;
+            border-radius: var(--border-radius);
+            border-left: 3px solid var(--accent-red);
+        }
+
+        .strategy-item h4 {
+            margin-bottom: 6px;
+            font-size: 1rem;
+        }
+
+        .strategy-item p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a0a;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid #333;
+            margin-top: 40px;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Utility */
+        .highlight {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span>⚔️</span> LoL攻略站
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">诺手出装</a></li>
+                    <li><a href="#">符文天赋</a></li>
+                    <li><a href="#">连招教学</a></li>
+                    <li><a href="#">英雄图鉴</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>诺手出装指南</h1>
+            <p>掌握德莱厄斯的连招与装备选择，在召唤师峡谷中打出致命的血腥收割。</p>
+        </section>
+
+        <div class="container">
+            <!-- Left Column: Builds & Strategy -->
+            <div class="content-area">
+                
+                <!-- Build 1: Standard -->
+                <article class="build-card">
+                    <div class="build-header">
+                        <h3>标准征服者流</h3>
+                        <span class="tag">主流上单</span>
+                    </div>
+                    <div class="build-items">
+                        <div class="item-slot">
+                            <div class="item-icon">🗡️</div>
+                            <span class="item-name">多兰之刃</span>
+                            <span class="item-type">出门装</span>
+                        </div>
+                        <div class="item-slot">
+                            <div class="item-icon">🛡️</div>
+                            <span class="item-name">提亚马特</span>
+                            <span class="item-type">核心装</span>
+                        </div>
+                        <div class="item-slot">
+                            <div class="item-icon">⚔️</div>
+                            <span class="item-name">斯塔缇克电刃</span>
+                            <span class="item-type">核心装</span>
+                        </div>
+                        <div class="item-slot">
+                            <div class="item-icon">🩸</div>
+                            <span class="item-name">斯特拉克的挑战护手</span>
+                            <span class="item-type">防御装</span>
+                        </div>
+                        <div class="item-slot">
+                            <div class="item-icon">🛡️</div>
+                            <span class="item-name">兰顿之兆</span>
+                            <span class="item-type">后续选择</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Build 2: Early Game -->
+                <article class="build-card">
+                    <div class="build-header">
+                        <h3>强势对线期</h3>
+                        <span class="tag">前期压制</span>
+                    </div>
+                    <div class="build-items">
+                        <div class="item-slot">
+                            <div class="item-icon">🗡️</div>
+                            <span class="item-name">多兰盾</span>
+                            <span class="item-type">出门装</span>
+                        </div>
+                        <div class="item-slot">
+                            <div class="item-icon">🗡️</div>
+                            <span class="item-name">长剑</span>
+                            <span class="item-type">核心装</span>
+                        </div>
+                        <div class="item-slot">
+                            <div class="item-icon">🩸</div>
+                            <span class="item-name">血手</span>
+                            <span class="item-type">核心装</span>
+                        </div>
+                        <div class="item-slot">
+                            <div class="item-icon">🛡️</div>
+                            <span class="item-name">板甲</span>
+                            <span class="item-type">后续选择</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Strategy Section -->
+                <section>
+                    <div class="section-header">
+                        <h2>对线思路与技巧</h2>
+                    </div>
+                    <div class="strategy-list">
+                        <div class="strategy-item">
+                            <h4>血怒触发机制</h4>
+                            <p>诺手的伤害核心在于被动“血怒”。利用Q技能（诺克萨斯断头台）或普攻触发流血效果叠加层数。叠满5层后开启E技能（无情铁手）拉回敌人并造成斩杀伤害。</p>
+                        </div>
+                        <div class="strategy-item">
+                            <h4>连招顺序</h4>
+                            <p>推荐连招：A-Q-E-W-A。先普攻触发流血，接Q叠加层数，用E技能拉回敌人接W（大杀四方）打满AOE伤害并减速，最后补A斩杀。注意利用小兵作为跳板调整E技能位置。</p>
+                        </div>
+                        <div class="strategy-item">
+                            <h4>出装选择建议</h4>
+                            <p>前期以续航为主，推荐多兰之刃或多兰盾。中期优先做出提亚马特补足清线能力，随后补足电刃或破败王者之刃提升爆发。后期根据敌方阵容选择血手或兰顿。</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Right Column: Runes & Info -->
+            <aside class="sidebar">
+                
+                <div class="section-header">
+                    <h2>符文天赋</h2>
+                </div>
+
+                <div class="runes-grid">
+                    <div class="rune-card">
+                        <h4>主系：精密</h4>
+                        <p><strong>征服者</strong><br>持续作战核心，叠满层数后大幅提升伤害。</p>
+                        <p style="margin-top:8px"><strong>凯旋</strong><br>击杀或参与击杀回复生命值。</p>
+                    </div>
+                    <div class="rune-card">
+                        <h4>副系：主宰</h4>
+                        <p><strong>血之滋味</strong><br>对英雄造成伤害时回复生命值。</p>
+                        <p style="margin-top:8px"><strong>贪欲猎手</strong><br>提供成长型吸血效果。</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 32px;" class="section-header">
+                    <h2>技能加点</h2>
+                </div>
+                <div class="strategy-item">
+                    <h4>推荐加点顺序</h4>
+                    <p style="font-size: 1.2rem; text-align: center; margin-top: 10px;">R > Q > W > E</p>
+                    <p style="margin-top: 8px; font-size: 0.9rem; color: var(--text-muted);">Q是主要输出手段，W提供清线与AOE，E是留人关键，大招拥有极高的斩杀线。</p>
+                </div>
+
+                <div style="margin-top: 32px;" class="section-header">
+                    <h2>召唤师技能</h2>
+                </div>
+                <div class="strategy-item">
+                    <h4>常用组合</h4>
+                    <ul style="list-style: disc; margin-left: 20px; margin-top: 10px; color: var(--text-muted);">
+                        <li><strong>闪现 + 点燃</strong>：对线期压制力最强，保证击杀成功率。</li>
+                        <li><strong>闪现 + 引燃</strong>：中后期团战切入后排必备。</li>
+                    </ul>
+                </div>
+
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 LoL攻略站. 本站提供诺手出装、符文及玩法参考，数据基于英雄联盟版本更新。</p>
+    </footer>
+
+</body>
+</html>
