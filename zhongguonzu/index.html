@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国女足-历史荣耀、赛场风采与未来展望</title>
+    <meta name="description" content="中国女足官方网站首页，展示中国女足国家队历史战绩、近期赛程、球员风采及青训发展。提供最新女足新闻、赛事直播信息及球迷互动社区。">
+    <meta name="keywords" content="中国女足, 中国女足国家队, 女足世界杯, 女足亚洲杯, 女足联赛">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #c41e3a; /* 女足红 */
+            --secondary-color: #f4f4f4;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --text-light: #ffffff;
+            --accent-gold: #f1c40f;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #f9f9f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .nav-menu a.active {
+            color: var(--primary-color);
+        }
+
+        /* 首屏 Hero */
+        .hero {
+            background: linear-gradient(135deg, rgba(196, 30, 58, 0.9), rgba(80, 20, 40, 0.8)), url('https://picsum.photos/seed/female_football_hero/1920/600') center/cover no-repeat;
+            color: var(--text-light);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #a0182e;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* 简报/最新动态 */
+        .news-section {
+            padding: 60px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -17px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-meta {
+            font-size: 12px;
+            color: var(--text-gray);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: #ffebeb;
+            color: var(--primary-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .news-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .news-excerpt {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* 赛事日历 */
+        .schedule-section {
+            background-color: white;
+            padding: 60px 0;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .schedule-table th, .schedule-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .schedule-table th {
+            background-color: #fafafa;
+            color: var(--text-gray);
+            font-weight: 600;
+        }
+
+        .match-status {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .status-upcoming {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .status-live {
+            background-color: #ffebee;
+            color: #c62828;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+        /* 球员风采 */
+        .players-section {
+            padding: 60px 0;
+        }
+
+        .players-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .player-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .player-card:hover {
+            box-shadow: 0 8px 20px rgba(196, 30, 58, 0.15);
+        }
+
+        .player-img-wrapper {
+            height: 250px;
+            overflow: hidden;
+            background-color: #eee;
+        }
+
+        .player-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .player-card:hover .player-img {
+            transform: scale(1.05);
+        }
+
+        .player-info {
+            padding: 15px;
+        }
+
+        .player-name {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .player-position {
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        /* 数据统计 */
+        .stats-section {
+            background-color: var(--text-dark);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .stat-item h3 {
+            font-size: 36px;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            font-size: 14px;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* 常见问题 */
+        .faq-section {
+            padding: 60px 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            border: 1px solid #eee;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 20px;
+            color: var(--primary-color);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            color: var(--text-gray);
+            font-size: 14px;
+            background-color: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 20px;
+            max-height: 200px;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #1a1a1a;
+            color: #999;
+            padding: 50px 0 20px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none; /* 简化处理，移动端隐藏菜单 */
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+                <span>中国女足</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#" class="active">首页</a>
+                <a href="#news">最新资讯</a>
+                <a href="#schedule">赛程直播</a>
+                <a href="#players">球员风采</a>
+                <a href="#history">历史荣誉</a>
+                <a href="#faq">球迷问答</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>铿锵玫瑰，绽放世界</h1>
+                <p>关注中国女足国家队，见证每一次冲刺、每一次扑救与每一次胜利。我们为女足加油，为拼搏喝彩。</p>
+                <div>
+                    <a href="#schedule" class="btn">查看赛程</a>
+                    <a href="#news" class="btn btn-outline">浏览新闻</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="news-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">最新资讯</h2>
+                    <a href="#" style="color: var(--primary-color); font-weight: 600;">更多 ></a>
+                </div>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <img src="https://picsum.photos/seed/womens_football_1/800/400" alt="女足训练照" class="news-image">
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="tag">集训动态</span>
+                                <span>2023-10-24</span>
+                            </div>
+                            <h3 class="news-title">中国女足新一期集训名单公布，多名新人入选</h3>
+                            <p class="news-excerpt">为备战即将到来的国际女足锦标赛，中国足协公布了最新一期的国家队集训名单。主教练重点考察了近期联赛中的表现优异的年轻球员，旨在为球队注入新鲜血液...</p>
+                            <a href="#" style="color: var(--primary-color); font-size: 14px; font-weight: 600;">阅读全文 &rarr;</a>
+                        </div>
+                    </article>
+                    <aside class="side-news">
+                        <div style="margin-bottom: 20px;">
+                            <img src="https://picsum.photos/seed/womens_football_2/400/250" alt="女足比赛" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;">
+                            <h4 style="font-size: 16px; margin-bottom: 5px;">女足亚洲杯决赛回顾：绝地反击再创辉煌</h4>
+                            <p style="font-size: 13px; color: #666;">回顾那场荡气回肠的决赛，中国队在落后的情况下顽强拼搏，最终实现逆转夺冠。</p>
+                        </div>
+                        <div>
+                            <img src="https://picsum.photos/seed/womens_football_3/400/250" alt="女足友谊赛" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 10px;">
+                            <h4 style="font-size: 16px; margin-bottom: 5px;">女足备战世预赛，友谊赛大胜对手</h4>
+                            <p style="font-size: 13px; color: #666;">在刚刚结束的友谊赛中，中国女足凭借多点开花，以5:0的比分横扫对手，展现良好竞技状态。</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="schedule-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">赛程直播</h2>
+                </div>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>赛事</th>
+                            <th>日期</th>
+                            <th>时间</th>
+                            <th>对阵双方</th>
+                            <th>状态</th>
+                            <th>观看</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>国际友谊赛</td>
+                            <td>2023-11-05</td>
+                            <td>20:00</td>
+                            <td>中国女足 vs 日本女足</td>
+                            <td><span class="match-status status-upcoming">未开始</span></td>
+                            <td><a href="#" style="color: var(--primary-color);">预约提醒</a></td>
+                        </tr>
+                        <tr>
+                            <td>女足世界杯预选赛</td>
+                            <td>2023-11-12</td>
+                            <td>19:30</td>
+                            <td>中国女足 vs 越南女足</td>
+                            <td><span class="match-status status-upcoming">未开始</span></td>
+                            <td><a href="#" style="color: var(--primary-color);">预约提醒</a></td>
+                        </tr>
+                        <tr>
+                            <td>国际邀请赛</td>
+                            <td>2023-10-28</td>
+                            <td>19:35</td>
+                            <td>中国女足 vs 丹麦女足</td>
+                            <td><span class="match-status status-live">直播中</span></td>
+                            <td><a href="#" style="color: var(--primary-color); font-weight: bold;">立即观看</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>12</h3>
+                        <p>世界杯最佳战绩</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>9</h3>
+                        <p>亚洲杯冠军次数</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>8</h3>
+                        <p>奥运会参赛次数</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>球迷支持度</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Players Section -->
+        <section id="players" class="players-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">球员风采</h2>
+                    <a href="#" style="color: var(--primary-color); font-weight: 600;">查看全部 ></a>
+                </div>
+                <div class="players-grid">
+                    <div class="player-card">
+                        <div class="player-img-wrapper">
+                            <img src="https://picsum.photos/seed/player1/300/400" alt="王霜" class="player-img">
+                        </div>
+                        <div class="player-info">
+                            <h4 class="player-name">王霜</h4>
+                            <p class="player-position">前腰 / 10号</p>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-img-wrapper">
+                            <img src="https://picsum.photos/seed/player2/300/400" alt="吴曦" class="player-img">
+                        </div>
+                        <div class="player-info">
+                            <h4 class="player-name">吴曦</h4>
+                            <p class="player-position">中场 / 8号</p>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-img-wrapper">
+                            <img src="https://picsum.photos/seed/player3/300/400" alt="朱钰" class="player-img">
+                        </div>
+                        <div class="player-info">
+                            <h4 class="player-name">朱钰</h4>
+                            <p class="player-position">门将</p>
+                        </div>
+                    </div>
+                    <div class="player-card">
+                        <div class="player-img-wrapper">
+                            <img src="https://picsum.photos/seed/player4/300/400" alt="张琳艳" class="player-img">
+                        </div>
+                        <div class="player-info">
+                            <h4 class="player-name">张琳艳</h4>
+                            <p class="player-position">边锋 / 11号</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-header" style="justify-content: center; border: none;">
+                    <h2 class="section-title">球迷常见问题</h2>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">中国女足下一场比赛什么时候开始？</div>
+                    <div class="faq-answer">请关注本站的“赛程直播”板块，我们会第一时间更新所有官方赛事安排及时间。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何购买女足比赛的门票？</div>
+                    <div class="faq-answer">通常门票会在比赛开始前一周在官方合作平台开启预售，具体购票渠道请留意官方公告。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">女足联赛的赛制是怎样的？</div>
+                    <div class="faq-answer">中国女足超级联赛采用主客场双循环赛制，赛季通常在每年的3月至10月进行。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">哪里可以获取关于女足的深度报道？</div>
+                    <div class="faq-answer">本站提供最新的转会新闻、战术分析和赛后评论，欢迎订阅我们的更新通知。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="margin-bottom: 15px; line-height: 1.8;">中国女足专题网站致力于为球迷提供最及时、最全面的赛事资讯与数据支持。我们记录每一位“铿锵玫瑰”的汗水与荣耀。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#">国家队名单</a></li>
+                        <li><a href="#">赛事日历</a></li>
+                        <li><a href="#">球员数据统计</a></li>
+                        <li><a href="#">历史荣誉墙</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">官方微博</a></li>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">球迷社区</a></li>
+                        <li><a href="#">媒体合作</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 中国女足专题站 版权所有 | 仅供展示与学习使用</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的FAQ折叠功能
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+  </html>
