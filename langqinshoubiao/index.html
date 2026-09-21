@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="浪琴手表官方价格查询指南，提供浪琴康卡斯、名匠、嘉岚等热门系列官方建议零售价参考，包含不同材质与表径的价格区间，帮助消费者了解市场行情与正品保障信息。">
+    <meta name="keywords" content="浪琴手表官方价格,浪琴官方报价,浪琴康卡斯价格,浪琴名匠价格,浪琴手表多少钱">
+    <title>浪琴手表官方价格-官方建议零售价与市场行情查询</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #bfa376;
+            --bg-color: #f8f8f8;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            font-size: 1rem;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a.active {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #a38b60;
+        }
+
+        /* Price Overview Section */
+        .overview-section {
+            padding: 60px 0;
+            background-color: var(--card-bg);
+        }
+
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .price-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-color: var(--accent-color);
+        }
+
+        .series-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .price-range {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .price-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Detail Tables */
+        .detail-section {
+            padding: 60px 0;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            background: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px 25px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-weight: 600;
+            color: var(--text-main);
+            white-space: nowrap;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background-color: #fafafa;
+        }
+
+        .price-tag {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Tips Section */
+        .tips-section {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .tip-item h3 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+
+        .tip-item h3::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .tip-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #999;
+            padding: 50px 0 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-wrap: wrap;
+            }
+            nav {
+                display: none;
+                width: 100%;
+                order: 3;
+                margin-top: 15px;
+            }
+            nav.active {
+                display: block;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                padding: 0;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">LON<span>GINE</span>价格查询</a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#" class="active">官方价格</a></li>
+                    <li><a href="#">热门系列</a></li>
+                    <li><a href="#">选购指南</a></li>
+                    <li><a href="#">售后服务</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>浪琴手表官方价格</h1>
+                <p>为您提供精准的浪琴官方建议零售价参考，涵盖康卡斯、名匠、嘉岚等经典系列，助您明明白白消费。</p>
+                <a href="#price-list" class="cta-button">查看价格表</a>
+            </div>
+        </section>
+
+        <!-- Price Overview -->
+        <section class="overview-section">
+            <div class="container">
+                <h2 class="section-title">系列价格概览</h2>
+                <p class="section-subtitle">基于浪琴官方建议零售价整理的热门系列区间参考</p>
+                
+                <div class="price-grid">
+                    <div class="price-card">
+                        <div class="series-name">名匠系列</div>
+                        <div class="price-range">¥ 14,000 - ¥ 25,000</div>
+                        <div class="price-desc">经典正装表，商务首选</div>
+                    </div>
+                    <div class="price-card">
+                        <div class="series-name">嘉岚系列</div>
+                        <div class="price-range">¥ 9,000 - ¥ 16,000</div>
+                        <div class="price-desc">优雅女装表，精致工艺</div>
+                    </div>
+                    <div class="price-card">
+                        <div class="series-name">康卡斯系列</div>
+                        <div class="price-range">¥ 8,000 - ¥ 15,000</div>
+                        <div class="price-desc">潜水运动表，坚固耐用</div>
+                    </div>
+                    <div class="price-card">
+                        <div class="series-name">心月系列</div>
+                        <div class="price-range">¥ 6,500 - ¥ 12,000</div>
+                        <div class="price-desc">浪漫月相，日常佩戴</div>
+                    </div>
+                    <div class="price-card">
+                        <div class="series-name">瑞舞系列</div>
+                        <div class="price-range">¥ 7,500 - ¥ 13,000</div>
+                        <div class="price-desc">复古设计，经典美学</div>
+                    </div>
+                    <div class="price-card">
+                        <div class="series-name">军旗系列</div>
+                        <div class="price-range">¥ 5,500 - ¥ 9,500</div>
+                        <div class="price-desc">时尚简约，年轻之选</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Price Table -->
+        <section id="price-list" class="detail-section">
+            <div class="container">
+                <h2 class="section-title">详细价格参考</h2>
+                <p class="section-subtitle">包含不同表径与材质的官方建议零售价对比</p>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>系列名称</th>
+                                <th>表径 (mm)</th>
+                                <th>材质</th>
+                                <th>官方建议零售价 (CNY)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>名匠</td>
+                                <td>40</td>
+                                <td>精钢</td>
+                                <td class="price-tag">¥ 14,100</td>
+                            </tr>
+                            <tr>
+                                <td>名匠</td>
+                                <td>40</td>
+                                <td>精钢/皮带</td>
+                                <td class="price-tag">¥ 14,900</td>
+                            </tr>
+                            <tr>
+                                <td>名匠</td>
+                                <td>41</td>
+                                <td>精钢</td>
+                                <td class="price-tag">¥ 15,800</td>
+                            </tr>
+                            <tr>
+                                <td>名匠</td>
+                                <td>41</td>
+                                <td>18K金</td>
+                                <td class="price-tag">¥ 52,600</td>
+                            </tr>
+                            <tr>
+                                <td>康卡斯</td>
+                                <td>41</td>
+                                <td>精钢</td>
+                                <td class="price-tag">¥ 10,100</td>
+                            </tr>
+                            <tr>
+                                <td>康卡斯</td>
+                                <td>41</td>
+                                <td>精钢/皮带</td>
+                                <td class="price-tag">¥ 10,900</td>
+                            </tr>
+                            <tr>
+                                <td>嘉岚</td>
+                                <td>26</td>
+                                <td>精钢</td>
+                                <td class="price-tag">¥ 9,100</td>
+                            </tr>
+                            <tr>
+                                <td>嘉岚</td>
+                                <td>28</td>
+                                <td>精钢</td>
+                                <td class="price-tag">¥ 9,900</td>
+                            </tr>
+                            <tr>
+                                <td>心月</td>
+                                <td>34</td>
+                                <td>精钢</td>
+                                <td class="price-tag">¥ 6,500</td>
+                            </tr>
+                            <tr>
+                                <td>心月</td>
+                                <td>34</td>
+                                <td>18K金</td>
+                                <td class="price-tag">¥ 20,200</td>
+                            </tr>
+                            <tr>
+                                <td>军旗</td>
+                                <td>38</td>
+                                <td>精钢</td>
+                                <td class="price-tag">¥ 5,500</td>
+                            </tr>
+                            <tr>
+                                <td>军旗</td>
+                                <td>38</td>
+                                <td>皮带</td>
+                                <td class="price-tag">¥ 6,100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buying Tips -->
+        <section class="tips-section">
+            <div class="container">
+                <h2 class="section-title">选购与价格建议</h2>
+                <div class="tips-grid">
+                    <article class="tip-item">
+                        <h3>认准官方渠道</h3>
+                        <p>浪琴手表的官方建议零售价是品牌方制定的指导价。建议通过浪琴中国官网授权经销商、品牌专柜或正规电商平台旗舰店购买，以确保价格透明且享受完整的保修服务。</p>
+                    </article>
+                    <article class="tip-item">
+                        <h3>材质影响价格</h3>
+                        <p>手表价格主要受表壳材质影响。精钢表款通常性价比最高，适合日常佩戴；18K金表款工艺复杂，价格也更为昂贵，适合作为投资或礼品。表带材质（如鳄鱼皮、米兰达织带）也会产生一定差价。</p>
+                    </article>
+                    <article class="tip-item">
+                        <h3>促销活动差异</h3>
+                        <p>官方建议零售价并非固定不动的售价。在节假日（如618、双11）或品牌周年庆期间，正规渠道常有折扣活动，实际成交价往往低于官方建议价，但需注意辨别是否为全新正品。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于价格查询</h4>
+                    <p>本页面提供的数据仅供参考，具体价格以各授权经销商当日实际报价为准。浪琴（Longines）为斯沃琪集团旗下品牌。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>相关系列</h4>
+                    <ul>
+                        <li><a href="#">名匠系列</a></li>
+                        <li><a href="#">康卡斯系列</a></li>
+                        <li><a href="#">嘉岚系列</a></li>
+                        <li><a href="#">心月系列</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">防伪查询</a></li>
+                        <li><a href="#">保修政策</a></li>
+                        <li><a href="#">保养指南</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 浪琴价格查询指南. 保留所有权利. 本站与Swatch Group无直接关联。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的移动端菜单切换逻辑
+        function toggleMenu() {
+            var nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
