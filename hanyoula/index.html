@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韩宥拉 - 韩国知名女演员与影视作品资料库</title>
+    <meta name="description" content="韩宥拉（Yura）韩国女演员、歌手，前Girl's Day成员。本站提供韩宥拉的个人资料、影视作品列表、写真图集、综艺节目精彩片段及最新动态资讯。">
+    <meta name="keywords" content="韩宥拉, Yura, 韩国女演员, Girl's Day, 影视作品, 综艺节目">
+    <style>
+        :root {
+            --primary-color: #d81b60;
+            --secondary-color: #880e4f;
+            --accent-color: #fce4ec;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f9f9f9;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Container */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero-tag {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Profile Section */
+        .profile-section {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .profile-img-wrapper {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .profile-img-wrapper img {
+            width: 100%;
+            transition: var(--transition);
+        }
+
+        .profile-img-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        .profile-info h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .profile-meta {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .meta-item {
+            margin-bottom: 10px;
+            display: flex;
+        }
+
+        .meta-label {
+            font-weight: 600;
+            width: 80px;
+            color: var(--text-gray);
+        }
+
+        .profile-bio {
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .profile-bio p {
+            margin-bottom: 15px;
+        }
+
+        .profile-bio strong {
+            color: var(--text-dark);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        .social-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Works Section */
+        .works-section {
+            padding: 60px 0;
+            background-color: var(--bg-light);
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .work-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .work-poster {
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .work-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .work-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 4px 10px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+
+        .work-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .work-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+        }
+
+        .work-year {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+        }
+
+        .work-desc {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.5;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .work-btn {
+            align-self: flex-start;
+            padding: 8px 20px;
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .work-card:hover .work-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 60px 0;
+            background-color: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 200px);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            position: relative;
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* News Section */
+        .news-section {
+            padding: 60px 0;
+            background-color: var(--bg-light);
+        }
+
+        .news-list {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .news-item {
+            display: flex;
+            padding: 25px;
+            border-bottom: 1px solid #eee;
+            transition: var(--transition);
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-item:hover {
+            background-color: #fafafa;
+        }
+
+        .news-date {
+            min-width: 80px;
+            text-align: center;
+            padding-right: 20px;
+            border-right: 1px solid #eee;
+            margin-right: 20px;
+        }
+
+        .news-date .day {
+            display: block;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .news-date .month {
+            font-size: 14px;
+            color: var(--text-gray);
+            text-transform: uppercase;
+        }
+
+        .news-content h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .news-content p {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #999;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav {
+                order: 3;
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-img-wrapper {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+            }
+
+            .gallery-item:nth-child(1) {
+                grid-column: span 2;
+                grid-row: span 1;
+                height: 250px;
+            }
+
+            .news-item {
+                flex-direction: column;
+            }
+
+            .news-date {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>YURA</span> 韩宥拉
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#profile">个人资料</a></li>
+                    <li><a href="#works">影视作品</a></li>
+                    <li><a href="#gallery">写真图集</a></li>
+                    <li><a href="#news">最新动态</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn" aria-label="搜索">🔍</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>韩宥拉 Yura</h1>
+                <p>韩国知名女演员、歌手，前女子组合 Girl's Day 成员。以清新自然的形象和扎实的演技，活跃于影视及综艺领域。</p>
+                <div class="hero-tags">
+                    <span class="hero-tag">影视演员</span>
+                    <span class="hero-tag">歌手</span>
+                    <span class="hero-tag">综艺主持</span>
+                    <span class="hero-tag">时尚偶像</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="profile" class="profile-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>个人简介</h2>
+                    <p>从偶像团体到影视演员的转型之路</p>
+                </div>
+                <div class="profile-grid">
+                    <div class="profile-img-wrapper">
+                        <img src="https://picsum.photos/seed/yura1/400/500" alt="韩宥拉个人照片">
+                    </div>
+                    <div class="profile-info">
+                        <h3>韩宥拉</h3>
+                        <div class="profile-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">本名：</span>
+                                <span>金宥拉</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">出生日期：</span>
+                                <span>1990年5月4日</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">出生地：</span>
+                                <span>韩国首尔特别市</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">所属公司：</span>
+                                <span>Happy Face Entertainment</span>
+                            </div>
+                        </div>
+                        <div class="profile-bio">
+                            <p>韩宥拉，韩国女歌手、演员，前女子演唱组合 <strong>Girl's Day</strong> 成员，在队内担任主唱、门面。她于2010年随组合正式出道，凭借歌曲《Expectation》和《Female President》在韩国及亚洲地区获得极高人气。</p>
+                            <p>2013年，韩宥拉开始涉足演艺圈，在电视剧《爱情雨》中饰演女主角宋诗雅，正式转型为演员。此后，她参演了《我的女儿瑞英》、《听见你的声音》、《魔女幼熙》等多部知名韩剧，展现了多样的演技风格。除了电视剧，她在综艺节目《Running Man》中也有出色表现，圈粉无数。</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-btn" title="Instagram">IG</a>
+                            <a href="#" class="social-btn" title="Twitter">TW</a>
+                            <a href="#" class="social-btn" title="YouTube">YT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="works" class="works-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>影视作品</h2>
+                    <p>精选韩宥拉主演的电视剧及电影</p>
+                </div>
+                <div class="works-grid">
+                    <article class="work-card">
+                        <div class="work-poster">
+                            <span class="work-tag">电视剧</span>
+                            <img src="https://picsum.photos/seed/yura2/300/450" alt="爱情雨海报">
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">爱情雨</h3>
+                            <p class="work-year">2014</p>
+                            <p class="work-desc">饰演 宋诗雅。一部跨越20年的爱情故事，韩宥拉在剧中展现了清纯可人的形象。</p>
+                            <a href="#" class="work-btn">查看详情</a>
+                        </div>
+                    </article>
+
+                    <article class="work-card">
+                        <div class="work-poster">
+                            <span class="work-tag">电视剧</span>
+                            <img src="https://picsum.photos/seed/yura3/300/450" alt="听见你的声音海报">
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">听见你的声音</h3>
+                            <p class="work-year">2013</p>
+                            <p class="work-desc">饰演 洪世娜。一部超自然法治剧，韩宥拉饰演检察官的未婚妻，演技获得好评。</p>
+                            <a href="#" class="work-btn">查看详情</a>
+                        </div>
+                    </article>
+
+                    <article class="work-card">
+                        <div class="work-poster">
+                            <span class="work-tag">电视剧</span>
+                            <img src="https://picsum.photos/seed/yura4/300/450" alt="魔女幼熙海报">
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">魔女幼熙</h3>
+                            <p class="work-year">2015</p>
+                            <p class="work-desc">饰演 郑幼熙。一部浪漫喜剧，韩宥拉在剧中饰演时尚杂志编辑，展现了职场女性的魅力。</p>
+                            <a href="#" class="work-btn">查看详情</a>
+                        </div>
+                    </article>
+
+                    <article class="work-card">
+                        <div class="work-poster">
+                            <span class="work-tag">综艺</span>
+                            <img src="https://picsum.photos/seed/yura5/300/450" alt="Running Man海报">
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">Running Man</h3>
+                            <p class="work-year">2016-2018</p>
+                            <p class="work-desc">固定成员。作为最年轻的成员加入，凭借活泼的性格和出色的运动能力成为节目亮点。</p>
+                            <a href="#" class="work-btn">查看详情</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>精选图集</h2>
+                    <p>韩宥拉时尚写真与活动现场</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/yura_g1/600/600" alt="韩宥拉时尚写真">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/yura_g2/300/300" alt="活动现场">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/yura_g3/300/300" alt="红毯造型">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/yura_g4/300/300" alt="杂志拍摄">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://picsum.photos/seed/yura_g5/300/300" alt="日常生活">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="news" class="news-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>最新动态</h2>
+                    <p>韩宥拉的近期新闻与活动</p>
+                </div>
+                <div class="news-list">
+                    <div class="news-item">
+                        <div class="news-date">
+                            <span class="day">15</span>
+                            <span class="month">10月</span>
+                        </div>
+                        <div class="news-content">
+                            <h4>韩宥拉将出演新剧《XXX》</h4>
+                            <p>据悉，韩宥拉确认出演SBS新剧，饰演女主角，搭档人气男演员...</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">
+                            <span class="day">02</span>
+                            <span class="month">09月</span>
+                        </div>
+                        <div class="news-content">
+                            <h4>Girl's Day 成员举办线上演唱会</h4>
+                            <p>为纪念出道十周年，Girl's Day成员们将举办特别线上演唱会...</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">
+                            <span class="day">20</span>
+                            <span class="month">08月</span>
+                        </div>
+                        <div class="news-content">
+                            <h4>韩宥拉担任某时尚品牌代言人</h4>
+                            <p>韩宥拉被选为某知名时尚品牌的全球代言人，将参与新品发布会...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于韩宥拉</h4>
+                    <p style="font-size: 14px; line-height: 1.6;">本网站为韩宥拉（Yura）的粉丝资讯站，旨在整理和展示她的影视作品、写真图集及最新动态。非官方网站，内容仅供学习交流。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">个人简介</a></li>
+                        <li><a href="#">影视作品</a></li>
+                        <li><a href="#">写真图集</a></li>
+                        <li><a href="#">最新动态</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>友情链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Happy Face Entertainment</a></li>
+                        <li><a href="#">Girl's Day 官方</a></li>
+                        <li><a href="#">KBS TV</a></li>
+                        <li><a href="#">SBS TV</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 韩宥拉资讯站. All Rights Reserved. Designed for Fans.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+  </html>
