@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SD敢达官网下载 - 官方正版授权的SD高达动作手游，提供安卓/iOS版本下载指南、新手入门攻略、机体图鉴及最新活动资讯。">
+    <meta name="keywords" content="sd敢达官网下载,SD敢达,高达手游,SD高达动作游戏,高达下载,机甲手游">
+    <title>SD敢达官网下载 - 官方正版授权机甲动作手游平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a237e;
+            --accent-color: #ffca28;
+            --text-dark: #1f2937;
+            --text-gray: #4b5563;
+            --bg-light: #f3f4f6;
+            --white: #ffffff;
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            background: linear-gradient(135deg, var(--primary-color), #3949ab);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .btn-download-nav {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .btn-download-nav:hover {
+            background-color: #283593;
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a237e 0%, #311b92 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            background-image: radial-gradient(circle at 80% 20%, rgba(255,202,40,0.2) 0%, transparent 40%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .download-actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            box-shadow: 0 4px 15px rgba(255, 202, 40, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 202, 40, 0.5);
+            background-color: #ffd54f;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* Game Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        /* Download Section */
+        .download-guide {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .step-tabs {
+            display: flex;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 20px;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--text-gray);
+            cursor: pointer;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+            background-color: #f9fafb;
+        }
+
+        .tab-content {
+            padding: 40px;
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .download-steps {
+            counter-reset: step;
+        }
+
+        .step-item {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+
+        .step-item::before {
+            counter-increment: step;
+            content: counter(step);
+            background-color: var(--primary-color);
+            color: var(--white);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .step-item h4 {
+            margin-bottom: 5px;
+        }
+
+        .system-req {
+            margin-top: 30px;
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .system-req h4 {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .req-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* Game Showcase */
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .game-card {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            cursor: pointer;
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .game-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 20px;
+            color: var(--white);
+        }
+
+        .card-overlay h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .card-overlay span {
+            font-size: 0.8rem;
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+            color: var(--text-gray);
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 20px;
+            max-height: 200px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111827;
+            color: #9ca3af;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #374151;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                gap: 15px;
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .showcase-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .req-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>SD高达</span> 下载中心
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#download" class="active">下载游戏</a></li>
+                    <li><a href="#features">游戏特色</a></li>
+                    <li><a href="#showcase">机体图鉴</a></li>
+                    <li><a href="#guide">新手攻略</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <a href="#download" class="btn-download-nav">立即下载</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>SD敢达 - 碰撞宇宙的机甲羁绊</h1>
+                <p>官方正版授权，还原经典机甲动作体验。数百种高达机体自由搭配，实时PVP对战，打造属于你的最强敢达军团。</p>
+                <div class="download-actions">
+                    <a href="#download" class="btn btn-primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Android下载
+                    </a>
+                    <a href="#download" class="btn btn-outline">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                        iOS下载
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>为什么选择SD敢达？</h2>
+                    <p>不仅仅是驾驶，更是策略与操作的完美结合</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <span class="feature-icon">⚡</span>
+                        <h3>爽快连招</h3>
+                        <p>基于物理引擎的打击感，支持无缝衔接的连招系统，还原机甲格斗的震撼体验。</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">🤖</span>
+                        <h3>百变机体</h3>
+                        <p>收录GN Drive、龙骑兵、超级洲际导弹等经典装备，数千种机体组合等你探索。</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">⚔️</span>
+                        <h3>实时竞技</h3>
+                        <p>5v5团队对战，支持语音交流与战术指挥，与全球玩家一较高下。</p>
+                    </article>
+                    <article class="feature-card">
+                        <span class="feature-icon">🏭</span>
+                        <h3>机体改造</h3>
+                        <p>自由升级机体部件，定制专属涂装与技能，打造独一无二的机甲风格。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section id="download" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>官方下载指南</h2>
+                    <p>安全、快速、无广告，请通过下方步骤安装</p>
+                </div>
+                <div class="download-guide">
+                    <div class="step-tabs">
+                        <button class="tab-btn active" onclick="openTab(event, 'android')">Android 安卓</button>
+                        <button class="tab-btn" onclick="openTab(event, 'ios')">iOS 苹果</button>
+                    </div>
+                    
+                    <div id="android" class="tab-content active">
+                        <div class="download-steps">
+                            <div class="step-item">
+                                <h4>1. 获取安装包</h4>
+                                <p>点击上方“Android下载”按钮，跳转至官方应用商店或下载页面，获取最新版本安装包（APK文件）。</p>
+                            </div>
+                            <div class="step-item">
+                                <h4>2. 允许安装未知来源应用</h4>
+                                <p>进入手机“设置” -> “安全” -> “未知来源”，开启开关以允许安装从浏览器下载的APK文件。</p>
+                            </div>
+                            <div class="step-item">
+                                <h4>3. 开始安装</h4>
+                                <p>找到下载的APK文件，点击“安装”，等待进度条完成。安装完成后点击“打开”启动游戏。</p>
+                            </div>
+                        </div>
+                        <div class="system-req">
+                            <h4>最低配置要求</h4>
+                            <div class="req-list">
+                                <div>操作系统：Android 5.0及以上</div>
+                                <div>处理器：四核 1.5GHz以上</div>
+                                <div>内存：2GB RAM</div>
+                                <div>存储空间：2GB可用空间</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="ios" class="tab-content">
+                        <div class="download-steps">
+                            <div class="step-item">
+                                <h4>1. 搜索游戏</h4>
+                                <p>在App Store中搜索“SD敢达”或“SD高达”，找到官方版本进行下载。</p>
+                            </div>
+                            <div class="step-item">
+                                <h4>2. 验证账号</h4>
+                                <p>下载完成后，点击游戏图标启动。首次进入需验证Apple ID，请确保账号地区支持游戏服务。</p>
+                            </div>
+                            <div class="step-item">
+                                <h4>3. 下载资源包</h4>
+                                <p>启动游戏后，请保持网络连接，游戏将自动下载必要的游戏资源包，请耐心等待。</p>
+                            </div>
+                        </div>
+                        <div class="system-req">
+                            <h4>iOS系统要求</h4>
+                            <div class="req-list">
+                                <div>iOS 11.0 或更高版本</div>
+                                <div>iPadOS 11.0 或更高版本</div>
+                                <div>建议使用iPad Pro或iPhone 7以上机型</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Showcase Section -->
+        <section id="showcase" class="section" style="background-color: #fff;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>热门机体展示</h2>
+                    <p>经典与新生代机甲的视觉盛宴</p>
+                </div>
+                <div class="showcase-grid">
+                    <div class="game-card">
+                        <img src="https://picsum.photos/seed/gundam1/300/400" alt="强袭自由高达">
+                        <div class="card-overlay">
+                            <h4>强袭自由高达</h4>
+                            <span>远程支援型</span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://picsum.photos/seed/gundam2/300/400" alt="独角兽高达">
+                        <div class="card-overlay">
+                            <h4>独角兽高达</h4>
+                            <span>近战爆发型</span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://picsum.photos/seed/gundam3/300/400" alt="00高达">
+                        <div class="card-overlay">
+                            <h4>00高达</h4>
+                            <span>技能控制型</span>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="https://picsum.photos/seed/gundam4/300/400" alt="沙扎比">
+                        <div class="card-overlay">
+                            <h4>沙扎比</h4>
+                            <span>全能平衡型</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题 (FAQ)</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">下载的游戏无法安装怎么办？</div>
+                        <div class="faq-answer">
+                            请检查手机是否开启了“未知来源”应用权限。如果是iOS设备，请确保网络连接正常并从App Store下载。若问题依旧，建议清除手机缓存后重试。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">游戏是否免费？</div>
+                        <div class="faq-answer">
+                            是的，SD敢达是免费下载并游玩的。游戏内包含道具商城，但所有核心玩法和机体均可通过游戏内活动免费获取。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">如何找回账号？</div>
+                        <div class="faq-answer">
+                            请在游戏登录界面点击“账号找回”，输入注册时的手机号或邮箱，按照提示验证身份即可找回账号数据。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">游戏支持哪些平台？</div>
+                        <div class="faq-answer">
+                            目前支持Android手机和平板，以及iPhone/iPad设备。Windows PC端暂未开放，敬请期待后续更新。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>SD高达下载中心</h3>
+                    <p>致力于为玩家提供最安全、最稳定的游戏下载体验。本站为非官方网站，仅提供游戏资讯与下载指引服务。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">游戏首页</a></li>
+                        <li><a href="#">玩家社区</a></li>
+                        <li><a href="#">官方微博</a></li>
+                        <li><a href="#">客服中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>游戏资料</h4>
+                    <ul>
+                        <li><a href="#">机体图鉴</a></li>
+                        <li><a href="#">技能列表</a></li>
+                        <li><a href="#">新手教程</a></li>
+                        <li><a href="#">活动日历</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">官方论坛</a></li>
+                        <li><a href="#">玩家交流群</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 SD高达下载中心. All Rights Reserved. 本站内容仅供学习与交流，请勿用于商业用途。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab Switching Logic
+        function openTab(evt, platform) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(platform).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // FAQ Accordion Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all items
+                faqItems.forEach(i => i.classList.remove('active'));
+                
+                // If it wasn't active, open it
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth Scroll for Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+  </html>
